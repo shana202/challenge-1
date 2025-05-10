@@ -1,12 +1,20 @@
 // src/App.jsx
 import React from 'react';
-import './App.css'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+
+//pages
+import BlogPostListPage from './pages/BlogPostListPage';
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="title">Hello World!</h1>
-    </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<BlogPostListPage />} />
+        </Routes>
+      </div>  
+    </Router>
   );
 }
 

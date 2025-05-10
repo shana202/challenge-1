@@ -1,0 +1,22 @@
+
+
+/* Blog Listing Grid */
+.blogListing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three equal columns */
+    gap: 2rem;                              /* space between cards */
+    padding: 2rem;                          /* outer padding */
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 768px) {
+    .blogListing {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 1199px) {
+    .blogListing {
+      grid-template-columns: 1fr;
+    }
+  }
+  
