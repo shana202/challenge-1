@@ -1,5 +1,6 @@
 
 import styles from './BlogPostItem.module.css';
+import { Link } from 'react-router-dom';
 
 /**
  * BlogPostItem component 
@@ -18,9 +19,15 @@ const BlogPostItem = ({
 }) => {
     return (
         <div className={styles.postItem}>
-            <h2 className={styles.postTitle}>{title}</h2>
+            <h2 className={styles.postTitle}>
+            <Link
+              to={url}
+              className={styles.postTitle}>
+              {title}
+            </Link>
+          </h2>
             <p className={styles.postSummary}>{summary}</p>
-            <p className={styles.postDate}>{new Date(date).toLocaleDateString()}</p>
+            <p className={styles.postDate}>Published on: {new Date(date).toLocaleDateString()}</p>
             <a className={styles.readMore} href={url}>Read more</a>
         </div>
     );

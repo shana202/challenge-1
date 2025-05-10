@@ -2,6 +2,7 @@ import { posts } from '../data/posts';
 import styles from './BlogPostListPage.module.css';
 import BlogPostItem from '../components/BlogPostItem/BlogPostItem';
 
+
 const BlogPostListPage = () => {
     if (!posts || posts.length === 0) {
         return (
